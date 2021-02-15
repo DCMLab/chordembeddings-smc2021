@@ -9,7 +9,6 @@ This study focuses on the exploration of the possibilities arising from the appl
 
 # Description of the Github repository
 
-
 The code is contained in the top level.  
 The folder [data](data) contains the datasets for this project.   
 The folder [papers](papers) contains some reference academic papers.  
@@ -36,6 +35,23 @@ This folder contains additional figures and documents supporting the results out
 
 ### Dendrograms
 There are two dendrograms, one for major sections (also shown in the paper), and another for minor sections. They both show how clustering can isolate some well-known tonal relationships between chords.
+
+### Accuracies
+There are two xlsx files for the accuracies detailed by composer and chord, one for major and one for minor sections.  
+The last column of each row shows the average of that row, i.e. the average prediction accuracy for that chord. We want to detect outliers, i.e. (`composer`, `chord`) cells such that the accuracy in the cell is significantly lower or higher than the accuracies for the same `chord` (i.e. in the same row): for this reason, the average is unweighted.  
+Each cell is coloured either green (positive outlier), yellow (regular point), or red (negative outlier): an outlier is a cell whose accuracy is off by at least 15% from the corresponding row average.
+
+## [Data](data)
+
+The [data](data/) folder contains two distinct dataset: a *key* dataset (containing the sequence of keys traversed by each piece of each composer) and a *chord* dataset (containing the sequence of chords traversed by each section of each composer). In this project, we only used the chord dataset.  
+
+### [Top level](data)
+
+The 6 files at the top level are almost unused. They provide the vocabulary of distinct words contained in a dataset: for example, [chord_vocab_minor.txt](data/chord_vocab_minor.txt) contains the list of all unique chords used by composers in minor sections.
+
+### [Chord dataset](data/chord)
+
+This dataset consists of 24 csv files, one for each composer. Each file consists of several lines, each representing a musical section. Each section consists of a key mode (e.g. MINOR), followed by a semicolon and by a list of chords in relative notation. Files contain both major and minor sections, so it is up to us to separate them.
 
 ### [Key dataset](data/key)
 
@@ -103,6 +119,8 @@ Training and testing are methods of the predictor class.
 The input of the network is directly the juxtaposition of the embedding coordinates of the chords constituting the context of the focus chord; the state of the LSTM layer is not used; the output is a vector of probabilites, and the loss is the MSELoss.
 
 ### [visual_clusters.py](visual_clusters.py)
+
+This file contains functions helping to visualise the clusters, for example by plotting the dendrogram, or by plotting the dimensionality-reduced chord embeddings with a different colour for each cluster.
 
 ### [run.py](run.py)
 
