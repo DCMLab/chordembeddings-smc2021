@@ -122,8 +122,8 @@ The input of the network is directly the juxtaposition of the embedding coordina
 
 This file contains functions helping to visualise the clusters, for example by plotting the dendrogram, or by plotting the dimensionality-reduced chord embeddings with a different colour for each cluster.
 
+This file contains functions helping to visualise the clusters, for example by plotting the dendrogram, or by plotting the dimensionality-reduced chord embeddings with a different colour for each cluster.
+
 ### [run.py](run.py)
 
 This file runs the algorithm a given number of times for all composers and output a dataframe that contains the accuracies for each composer and each run
-
-This file contains functions helping to visualise the clusters, for example by plotting the dendrogram, or by plotting the dimensionality-reduced chord embeddings with a different colour for each cluster.
