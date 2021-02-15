@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 from scipy.cluster.hierarchy import dendrogram
 
 
-def plot_dendrogram(model, figsize=(10,10), dpi=100, fig_name='figures/dendrogram', **kwargs):
+def plot_dendrogram(model, figsize=(6,8), dpi=300, fig_name='dendrogram', **kwargs):
     # Create linkage matrix and then plot the dendrogram
 
     # create the counts of samples under each node
@@ -25,6 +25,11 @@ def plot_dendrogram(model, figsize=(10,10), dpi=100, fig_name='figures/dendrogra
     
     # Plot the corresponding dendrogram
     dendrogram(linkage_matrix, ax=ax, **kwargs)
+    
+    plt.tick_params(axis='y', labelsize=12)
+    plt.xlabel('Cosine Distance')
+    plt.ylabel('Chords')
+    plt.tight_layout()
     
     plt.savefig(fig_name)
     
