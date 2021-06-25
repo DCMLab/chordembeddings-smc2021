@@ -1,6 +1,18 @@
 # A Historical Analysis of Harmonic Progressions Using Chord Embeddings
 
-This repository contains the data and code for our upcoming 2021 SMC submission.
+This repository contains the data and code for our upcoming 2021 SMC paper, "Chord Embeddings of Harmonic Progressions Reveal Historical Trends".
+
+If you use it, please cite it:
+
+```
+@inproceedings{Anzuoni:21,
+  title={Chord Embeddings of Harmonic Progressions Reveal Historical Trends},
+  author={Anzuoni, Elia and Ayhan, Sinan and Dutto, Federico and McLeod, Andrew and Moss, Fabian C. and Rohrmeier, Martin},
+  booktitle={Sound and Music Computing Conference {(SMC)}},
+  year={2021},
+  pages={284--291}
+}
+```
 
 ## Abstract
 
