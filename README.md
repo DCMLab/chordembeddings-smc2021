@@ -1,6 +1,6 @@
 # A Historical Analysis of Harmonic Progressions Using Chord Embeddings
 
-This repository contains the data and code for our upcoming 2021 SMC paper, "Chord Embeddings of Harmonic Progressions Reveal Historical Trends".
+This repository contains the data and code for our 2021 SMC paper, "Chord Embeddings of Harmonic Progressions Reveal Historical Trends".
 
 If you use it, please cite it:
 
